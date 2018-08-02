@@ -10,4 +10,6 @@
 
 @interface Newc : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIWebView *webView; ///< UIWebView
+
 @end

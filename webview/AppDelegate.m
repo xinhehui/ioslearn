@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "ViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //第一种也是最常用的一种
+     ViewController *one=[[ViewController alloc]init];
+     UINavigationController *nav=[[UINavigationController alloc]initWithRootViewController:one];
+    
+    //1.创建一个导航控制器
+//    UINavigationController *nav=[[UINavigationController alloc]init];
+    //2.设置导航控制器为window的根视图
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+
+    self.window.rootViewController=nav;
+//    self.window.backgroundColor = [UIColor redColor];
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
@@ -24,6 +37,7 @@
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    
 }
 
 

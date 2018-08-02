@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface WkwebViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet WK *webView; ///< UIWebView
 @end

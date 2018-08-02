@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		1C637A6821083EFD001E2783 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C637A6721083EFD001E2783 /* main.m */; };
 		1C637A7221083EFD001E2783 /* webviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C637A7121083EFD001E2783 /* webviewTests.m */; };
 		1C637A7D21083EFD001E2783 /* webviewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C637A7C21083EFD001E2783 /* webviewUITests.m */; };
+		1C637A9021084BE6001E2783 /* Newc.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C637A8F21084BE6001E2783 /* Newc.m */; };
+		1C7A99E0211004DC00F1C07D /* wkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7A99DF211004DC00F1C07D /* wkViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		1C637A7821083EFD001E2783 /* webviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = webviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C637A7C21083EFD001E2783 /* webviewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = webviewUITests.m; sourceTree = "<group>"; };
 		1C637A7E21083EFD001E2783 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C637A8E21084BE6001E2783 /* Newc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Newc.h; sourceTree = "<group>"; };
+		1C637A8F21084BE6001E2783 /* Newc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Newc.m; sourceTree = "<group>"; };
+		1C7A99DE211004DC00F1C07D /* wkViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = wkViewController.h; sourceTree = "<group>"; };
+		1C7A99DF211004DC00F1C07D /* wkViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = wkViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,8 @@
 		1C637A4C21083EFB001E2783 = {
 			isa = PBXGroup;
 			children = (
+				1C7A99DE211004DC00F1C07D /* wkViewController.h */,
+				1C7A99DF211004DC00F1C07D /* wkViewController.m */,
 				1C637A5721083EFB001E2783 /* webview */,
 				1C637A7021083EFD001E2783 /* webviewTests */,
 				1C637A7B21083EFD001E2783 /* webviewUITests */,
@@ -110,6 +118,8 @@
 				1C637A6321083EFD001E2783 /* LaunchScreen.storyboard */,
 				1C637A6621083EFD001E2783 /* Info.plist */,
 				1C637A6721083EFD001E2783 /* main.m */,
+				1C637A8E21084BE6001E2783 /* Newc.h */,
+				1C637A8F21084BE6001E2783 /* Newc.m */,
 			);
 			path = webview;
 			sourceTree = "<group>";
@@ -199,19 +209,22 @@
 				TargetAttributes = {
 					1C637A5421083EFB001E2783 = {
 						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
 					};
 					1C637A6C21083EFD001E2783 = {
 						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 1C637A5421083EFB001E2783;
 					};
 					1C637A7721083EFD001E2783 = {
 						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
 						TestTargetID = 1C637A5421083EFB001E2783;
 					};
 				};
 			};
 			buildConfigurationList = 1C637A5021083EFB001E2783 /* Build configuration list for PBXProject "webview" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -264,7 +277,9 @@
 			files = (
 				1C637A5D21083EFB001E2783 /* ViewController.m in Sources */,
 				1C637A6821083EFD001E2783 /* main.m in Sources */,
+				1C637A9021084BE6001E2783 /* Newc.m in Sources */,
 				1C637A5A21083EFB001E2783 /* AppDelegate.m in Sources */,
+				1C7A99E0211004DC00F1C07D /* wkViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,11 +449,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B6TF4RSPW9;
 				INFOPLIST_FILE = webview/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xinhehui.webview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -450,11 +463,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = B6TF4RSPW9;
 				INFOPLIST_FILE = webview/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xinhehui.webview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -467,11 +478,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = webviewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xinhehui.webviewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -485,11 +492,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = webviewTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xinhehui.webviewTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -502,11 +505,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = webviewUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xinhehui.webviewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -519,11 +518,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = webviewUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xinhehui.webviewUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
